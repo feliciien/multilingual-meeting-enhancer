@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 ```
 ```
-pip app.py
+python app.py
 ```
 
 A temporary extra requirement for fairseq2 is [libsndfile](https://github.com/libsndfile/libsndfile). From [Conda](https://docs.conda.io/en/latest/) environment it can be installed via:
