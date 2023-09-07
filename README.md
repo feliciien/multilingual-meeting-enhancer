@@ -1,8 +1,11 @@
 ![](translator.png)
-# SeamlessM4T
-SeamlessM4T is designed to provide high quality translation, allowing people from different linguistic communities to communicate effortlessly through speech and text.
+# multilingual-meeting-enhancer
 
-SeamlessM4T covers:
+multilingual-meeting-enhancer
+ is designed to provide high quality translation, allowing people from different linguistic communities to communicate effortlessly through speech and text.
+
+multilingual-meeting-enhancer
+:
 - 📥 101 languages for speech input.
 - ⌨️ 96 Languages for text input/output.
 - 🗣️ 35 languages for speech output.
@@ -22,9 +25,15 @@ Links:
 
 # Quick Start
 ## Installation
+```
+cd seamless_m4t .
+```
+```
+pip install -r requirements.txt
 
 ```
-pip install .
+```
+pip app.py
 ```
 
 A temporary extra requirement for fairseq2 is [libsndfile](https://github.com/libsndfile/libsndfile). From [Conda](https://docs.conda.io/en/latest/) environment it can be installed via:
