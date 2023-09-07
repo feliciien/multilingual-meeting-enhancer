@@ -16,13 +16,11 @@ from lang_list import (
     TEXT_SOURCE_LANGUAGE_NAMES,
 )
 
-DESCRIPTION = """# SeamlessM4T
+DESCRIPTION = """# Multilingual Translator
 
-[SeamlessM4T](https://github.com/facebookresearch/seamless_communication) is designed to provide high-quality
-translation, allowing people from different linguistic communities to communicate effortlessly through speech and text.
+The Multilingual Translator is engineered to deliver top-tier translation capabilities, fostering seamless communication among individuals hailing from diverse linguistic backgrounds. It excels in both spoken and written language domains.
 
-This unified model enables multiple tasks like Speech-to-Speech (S2ST), Speech-to-Text (S2TT), Text-to-Speech (T2ST)
-translation and more, without relying on multiple separate models.
+This all-encompassing model empowers a wide range of functions, including Speech-to-Speech (S2ST), Speech-to-Text (S2TT), and Text-to-Speech (T2ST) translations, all within a unified framework. Importantly, it accomplishes these tasks without the need for multiple distinct models, streamlining the translation process and enhancing efficiency.
 """
 
 CACHE_EXAMPLES = os.getenv("CACHE_EXAMPLES") == "1"
@@ -43,7 +41,7 @@ translator = Translator(
     model_name_or_card="seamlessM4T_large",
     vocoder_name_or_card="vocoder_36langs",
     device=device,
-    sample_rate=AUDIO_SAMPLE_RATE,
+    dtype=torch.float32, 
 )
 
 
