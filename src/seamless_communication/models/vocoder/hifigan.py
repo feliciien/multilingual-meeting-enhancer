@@ -28,8 +28,9 @@ def get_padding(kernel_size: int, dilation: int = 1) -> int:
 
 class ResBlock(torch.nn.Module):
     def __init__(
-        self, channels: int, kernel_size: int = 3, dilation: List[int] = [1, 3, 5]
+        self, channels: int, kernel_size: int = 3, dilation: Optional[List[int]] = None
     ):
+        dilation = [1, 3, 5] if dilation is None else dilation
         super(ResBlock, self).__init__()
         self.convs1 = nn.ModuleList(
             [
