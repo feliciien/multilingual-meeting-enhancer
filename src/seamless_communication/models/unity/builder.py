@@ -509,8 +509,7 @@ class UnitYT2UBuilder:
 
     def build_encoder(self) -> Optional[TransformerEncoder]:
         """Build a Transformer encoder."""
-        num_layers = self.config.num_encoder_layers
-        if num_layers == 0:
+        if (num_layers := self.config.num_encoder_layers) == 0:
             return None
 
         layers = [self.build_encoder_layer() for _ in range(num_layers)]
